@@ -1,0 +1,72 @@
+/* CSS stylesheet for toggleSwitch.html. */
+
+body {
+    background-color: rgb(185, 185, 185);
+    font-family: Arial;
+  }
+
+  a {
+    margin: 15px 10px;
+    text-decoration: none;
+  }
+
+  .panel {
+    display: flex;
+    flex-direction: column;
+    background-color: beige;
+    width: 190px;
+    border-radius: 5px;
+    padding: 5px 5px;
+  }
+
+  .slot {
+    display: flex;
+    align-items: center;
+  }
+
+  .sw {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+  .sw input {
+    opacity: 0;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(218, 218, 218);
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+
+  input:checked + .slider {
+    background-color: rgb(0, 211, 0);
+  }
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
