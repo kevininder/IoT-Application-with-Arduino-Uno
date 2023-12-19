@@ -60,8 +60,7 @@ void showPage(WebServer &server) {
   server.printP(htmlFoot);
 }
 
-void defaultCmd(WebServer &server, WebServer::ConnectionType type, char *, bool)
-{
+void defaultCmd(WebServer &server, WebServer::ConnectionType type, char *, bool) {
   server.httpSuccess();
 
   if (type != WebServer::HEAD) {
@@ -69,8 +68,7 @@ void defaultCmd(WebServer &server, WebServer::ConnectionType type, char *, bool)
   }
 }
 
-void getCmd(WebServer &server, WebServer::ConnectionType type, char *url_tail, bool tail_complete)
-{
+void getCmd(WebServer &server, WebServer::ConnectionType type, char *url_tail, bool tail_complete) {
   URLPARAM_RESULT rc;
   char name[3], value[3];
   byte rawNum, pinNum;
